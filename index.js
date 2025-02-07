@@ -11,8 +11,8 @@ const moment = require('moment');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const accountSid = 'ACb01232d75953dc8e79bd27d73f598b63';
-const authToken = '99203cef2aadedf43afd6c9af1f7c1c0';
+// const accountSid = 'ACb01232d75953dc8e79bd27d73f598b63';
+// const authToken = '99203cef2aadedf43afd6c9af1f7c1c0';
 const whatsappNumber = 'whatsapp:+14155238886';
 const client = twilio(accountSid, authToken);
 
