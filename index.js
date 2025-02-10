@@ -11,8 +11,8 @@ const moment = require('moment');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// const accountSid = 'ACb01232d75953dc8e79bd27d73f598b63';
-// const authToken = '99203cef2aadedf43afd6c9af1f7c1c0';
+const accountSid = 'ACc0e381aca09004166dca994984441ab3';
+const authToken = '77170645b8530e075b7b8626bef3edc4';
 const whatsappNumber = 'whatsapp:+14155238886';
 const client = twilio(accountSid, authToken);
 
@@ -196,7 +196,7 @@ if (currentTime.isAfter(cutOffTime) && dateObj.isSame(tomorrow, 'day')) {
       const patientData = userState[from];
       await updateAppointmentWithDoctor(patientData.name, patientData.mr_no, patientData.date, patientData.time, patientData.doctor, true);
       sendMessage(from, "Your appointment has been confirmed with the selected doctor.");
-      userState[from].step = 'getdetails';
+       userState[from].step = 'getdetails';
      sendMessage(from, "Provide status, MR No' to check your appointment status.");
     } else if (message === 'no') {
       sendMessage(from, "Appointment has been cancelled. Type 'hi' to restart.");
